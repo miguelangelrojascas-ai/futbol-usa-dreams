@@ -1,17 +1,19 @@
 import { Button } from "@/components/ui/button";
+import foundersImage from "@/assets/founders.png";
+import mohammedImage from "@/assets/mohammed.png";
 
 const founders = [
   {
     name: "Ignacio",
     role: "Finanzas y Operaciones",
     quote: "Viví la soledad de estar en un país extranjero con una agencia que solo buscaba dinero. Fundé esto para que ningún jugador se sienta abandonado.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800",
+    image: foundersImage,
   },
   {
     name: "Mohammed",
     role: "Relaciones con Universidades",
     quote: "Me sentí abandonado al intentar transferirme. Nuestra misión es estar presentes en todo momento para el jugador y su familia.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800",
+    image: mohammedImage,
   },
 ];
 
