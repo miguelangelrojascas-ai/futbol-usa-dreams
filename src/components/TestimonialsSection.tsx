@@ -1,34 +1,37 @@
 import { Star } from "lucide-react";
+import omarImage from "@/assets/omar-ocampos.jpg";
+import rogelioImage from "@/assets/rogelio-rojas.jpg";
+import diegoImage from "@/assets/diego-salamanca.jpg";
 import joepJoshuaImage from "@/assets/joep-joshua.jpg";
 
 const testimonials = [
+  {
+    name: "Omar Ocampos",
+    position: "Mediocampista",
+    university: "Cowley College",
+    image: omarImage,
+    quote: "FutbolUAgency me ayudó a cumplir mi sueño de jugar y estudiar en Estados Unidos. Su apoyo fue incondicional desde el primer día.",
+  },
+  {
+    name: "Rogelio Rojas",
+    position: "Mediocampista",
+    university: "Shorter University",
+    image: rogelioImage,
+    quote: "El equipo de FutbolUAgency estuvo siempre presente, guiándome en cada paso del proceso. Ahora estoy viviendo mi sueño americano.",
+  },
+  {
+    name: "Diego Salamanca",
+    position: "Defensa",
+    university: "UW-Stout",
+    image: diegoImage,
+    quote: "Gracias a FutbolUAgency conseguí una beca completa en una excelente universidad. Su profesionalismo y dedicación marcaron la diferencia.",
+  },
   {
     name: "Joep Joshua",
     position: "Mediocampista",
     university: "Seattle University",
     image: joepJoshuaImage,
-    quote: "Comprometido con Seattle University gracias al apoyo incondicional de Futbol U Agency. Este es el comienzo de un gran capítulo en mi carrera deportiva y académica.",
-  },
-  {
-    name: "Alejandro Pérez",
-    position: "Delantero",
-    university: "Stanford University",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800",
-    quote: "Gracias a Futbol U Agency, ahora estoy jugando en una de las mejores universidades del país mientras obtengo una educación de clase mundial. El equipo me apoyó en cada paso.",
-  },
-  {
-    name: "David Moreno",
-    position: "Defensa",
-    university: "Clemson University",
-    image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=800",
-    quote: "El proceso fue increíblemente fluido. Desde la evaluación inicial hasta firmar mi beca, el equipo estuvo siempre disponible y me guió con profesionalismo total.",
-  },
-  {
-    name: "Sofía Castillo",
-    position: "Mediocampista",
-    university: "Univ. North Carolina",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800",
-    quote: "Nunca pensé que mi sueño de jugar en Estados Unidos sería posible. Futbol U Agency no solo lo hizo realidad, sino que negociaron una beca que cubre todo. ¡Eternamente agradecida!",
+    quote: "Comprometido con Seattle University gracias al apoyo incondicional de FutbolUAgency. Este es el comienzo de un gran capítulo en mi carrera deportiva y académica.",
   },
 ];
 
@@ -45,11 +48,11 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
+              className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-border"
             >
               <div className="aspect-square overflow-hidden">
                 <img
@@ -62,18 +65,18 @@ const TestimonialsSection = () => {
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                    <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
                   ))}
                 </div>
 
                 {/* Quote */}
-                <p className="text-muted-foreground italic mb-6 leading-relaxed">
+                <p className="text-muted-foreground italic mb-4 text-sm leading-relaxed">
                   "{testimonial.quote}"
                 </p>
 
                 {/* Info */}
                 <div>
-                  <h3 className="text-xl font-bold text-foreground">
+                  <h3 className="text-lg font-bold text-foreground">
                     {testimonial.name}
                   </h3>
                   <p className="text-primary font-semibold text-sm">

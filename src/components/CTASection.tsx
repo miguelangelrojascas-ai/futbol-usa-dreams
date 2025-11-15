@@ -7,15 +7,15 @@ const CTASection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-6">
-            Agenda tu Evaluación Gratuita
+            ¿Listo para comenzar?
           </h2>
-          <p className="text-xl text-primary-foreground/90 mb-8">
-            Empieza a construir tu futuro universitario hoy. Sin compromiso, sin costo.
+          <p className="text-xl text-primary-foreground/95 mb-8">
+            Agenda una evaluación gratuita de 20 minutos con nuestro equipo
           </p>
           <Button 
             asChild
             size="lg"
-            className="bg-card hover:bg-card/90 text-foreground text-lg px-8 py-6 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all font-bold"
+            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all font-bold rounded-xl"
           >
             <a 
               href="https://calendly.com/miguelangelrojascas/caribe-pos" 
@@ -23,7 +23,7 @@ const CTASection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2"
             >
-              Agendar Evaluación Gratuita
+              Evalúa tu Beca GRATIS
               <ArrowRight className="w-5 h-5" />
             </a>
           </Button>

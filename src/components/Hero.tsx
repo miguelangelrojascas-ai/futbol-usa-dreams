@@ -11,7 +11,7 @@ const Hero = () => {
             backgroundImage: `url('https://images.unsplash.com/photo-1459865264687-595d652de67e?q=80&w=2070')`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/85 to-brand-green/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/75" />
       </div>
 
       {/* Content */}
@@ -20,13 +20,13 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Cumple tu sueño de jugar y estudiar en Estados Unidos
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Transformamos tu talento deportivo en una oportunidad universitaria
+          <p className="text-xl md:text-2xl text-white/95 mb-8 max-w-2xl mx-auto">
+            Convertimos tu talento en una oportunidad universitaria real
           </p>
           <Button 
             asChild
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all font-bold"
+            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all font-bold rounded-xl"
           >
             <a href="https://calendly.com/miguelangelrojascas/caribe-pos" target="_blank" rel="noopener noreferrer">
               Comenzar mi Evaluación Gratuita

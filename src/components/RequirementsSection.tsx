@@ -1,29 +1,25 @@
-import { Trophy, GraduationCap, Share2, Globe } from "lucide-react";
+import { Trophy, GraduationCap, Video, Globe } from "lucide-react";
 
 const requirements = [
   {
     icon: Trophy,
     title: "Nivel Deportivo",
-    description: "Experiencia competitiva en tu deporte",
-    image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800",
+    description: "Experiencia competitiva en clubes, academias o selecciones.",
   },
   {
     icon: GraduationCap,
     title: "Nivel de Estudios",
-    description: "Rendimiento académico sólido",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800",
+    description: "Haber terminado el bachillerato/ESO o estar en último año.",
   },
   {
-    icon: Share2,
-    title: "Redes Sociales",
-    description: "Presencia digital activa",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800",
+    icon: Video,
+    title: "Video Destacado",
+    description: "Tener videos jugando es fundamental para evaluar tu nivel.",
   },
   {
     icon: Globe,
-    title: "Idioma",
-    description: "Conocimientos básicos de inglés",
-    image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=800",
+    title: "Inglés Básico",
+    description: "Se recomienda un nivel básico de inglés. Te guiamos en los exámenes.",
   },
 ];
 
@@ -36,37 +32,25 @@ const RequirementsSection = () => {
             Requisitos Básicos
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Lo que necesitas para comenzar tu camino hacia una beca deportiva
+            Lo que necesitas para iniciar tu camino hacia una beca deportiva
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {requirements.map((req, index) => (
             <div
               key={index}
-              className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all h-80"
+              className="bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-border text-center"
             >
-              {/* Background Image */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                style={{ backgroundImage: `url(${req.image})` }}
-              />
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/95 via-brand-navy/70 to-brand-navy/30" />
-              
-              {/* Content */}
-              <div className="relative h-full flex flex-col items-center justify-end p-6 text-center">
-                <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                  <req.icon className="w-7 h-7 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {req.title}
-                </h3>
-                <p className="text-white/90 text-sm">
-                  {req.description}
-                </p>
+              <div className="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                <req.icon className="w-7 h-7 text-secondary" />
               </div>
+              <h3 className="text-lg font-bold text-foreground mb-3">
+                {req.title}
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {req.description}
+              </p>
             </div>
           ))}
         </div>

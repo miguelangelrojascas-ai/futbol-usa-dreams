@@ -6,7 +6,7 @@ const founders = [
   {
     name: "Ignacio De Bejar",
     role: "Finanzas y Operaciones",
-    quote: "Viví la soledad de estar en un país extranjero con una agencia que solo buscaba dinero. Fundé esto para que ningún jugador se sienta abandonado.",
+    quote: "Vivir la soledad de estar en un país extranjero con una agencia que solo buscaba dinero me marcó. Fundé esto para que ningún jugador se sienta abandonado.",
     image: ignacioImage,
   },
   {
@@ -19,16 +19,16 @@ const founders = [
 
 const AboutSection = () => {
   return (
-    <section id="quienes-somos" className="py-20 bg-card">
+    <section id="quienes-somos" className="py-20 bg-neutral-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             Más que una Agencia, Somos tu Equipo
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ignacio y Mohammed fundaron Futbol Agency para que ningún jugador vuelva a sentirse solo en su sueño. 
-            Tras vivir malas experiencias con agencias que desaparecían, decidieron crear una organización transparente, 
-            cercana y comprometida.
+            Ignacio y Mohammed fundaron FutbolUAgency para que ningún jugador vuelva a sentirse solo en su sueño. 
+            Tras vivir malas experiencias con agencias poco transparentes, decidieron crear una organización cercana, 
+            profesional y comprometida.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ const AboutSection = () => {
           {founders.map((founder, index) => (
             <div
               key={index}
-              className="bg-background rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
+              className="bg-background rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
             >
               <div className="aspect-square overflow-hidden">
                 <img
@@ -46,10 +46,10 @@ const AboutSection = () => {
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-2">
+                <h3 className="text-2xl font-bold text-primary mb-2">
                   {founder.name}
                 </h3>
-                <p className="text-primary font-semibold mb-4">
+                <p className="text-secondary font-semibold mb-4">
                   {founder.role}
                 </p>
                 <p className="text-muted-foreground italic leading-relaxed">
@@ -64,7 +64,7 @@ const AboutSection = () => {
           <Button 
             asChild
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg"
+            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold shadow-lg rounded-xl"
           >
             <a href="https://calendly.com/miguelangelrojascas/caribe-pos" target="_blank" rel="noopener noreferrer">
               Conoce cómo podemos ayudarte
