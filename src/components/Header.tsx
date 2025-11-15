@@ -19,7 +19,7 @@ const Header = () => {
               alt="Futbol Agency Logo" 
               className="h-12 w-auto"
             />
-            <span className="text-xl font-bold text-foreground">Futbol Agency</span>
+            <span className="text-xl font-bold text-foreground">Futbol U Agency</span>
           </div>
 
           {/* Desktop Navigation */}
