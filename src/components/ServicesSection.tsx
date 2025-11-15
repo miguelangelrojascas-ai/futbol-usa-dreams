@@ -1,20 +1,25 @@
-import { Target, Video, Handshake } from "lucide-react";
+import { Target, Video, Handshake, HeartHandshake } from "lucide-react";
 
 const services = [
   {
     icon: Target,
-    title: "Evaluación Académica y Deportiva",
-    description: "Analizamos tu perfil completo para identificar las mejores oportunidades de becas que se ajusten a tu nivel y objetivos.",
+    title: "Evaluación Deportiva y Académica",
+    description: "Analizamos tu nivel futbolístico y académico para identificar universidades que encajen con tu perfil, metas y presupuesto.",
   },
   {
     icon: Video,
-    title: "Video Profesional (VCL)",
-    description: "Creamos tu video destacado profesional que muestra tu mejor juego para captar la atención de entrenadores universitarios.",
+    title: "Creación de Perfil Profesional + Highlight",
+    description: "Diseñamos tu perfil completo en inglés, incluyendo edición de video profesional con tus mejores jugadas.",
   },
   {
     icon: Handshake,
-    title: "Conexión y Negociación",
-    description: "Te conectamos directamente con entrenadores de universidades y negociamos las mejores condiciones de becas para ti.",
+    title: "Conexión Directa y Negociación con Universidades",
+    description: "Nos encargamos de presentarte a entrenadores en EE. UU. y gestionar becas según tus objetivos.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Acompañamiento Personalizado",
+    description: "Te guiamos paso a paso: aplicación universitaria, visado, procesos deportivos y adaptación.",
   },
 ];
 
@@ -27,23 +32,23 @@ const ServicesSection = () => {
             Nuestros Servicios
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Te acompañamos en cada paso del camino hacia tu beca deportiva
+            Te acompañamos en todo el proceso hacia tu beca deportiva en EE. UU.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-border"
+              className="bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-border"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                <service.icon className="w-8 h-8 text-primary" />
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                <service.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">
+              <h3 className="text-lg font-bold text-foreground mb-3">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>

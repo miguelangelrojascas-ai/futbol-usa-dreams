@@ -9,17 +9,17 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
               src={new URL('@/assets/logo.png', import.meta.url).href} 
-              alt="Futbol Agency Logo" 
+              alt="FutbolUAgency Logo" 
               className="h-12 w-auto"
             />
-            <span className="text-xl font-bold text-foreground">Futbol U Agency</span>
+            <span className="text-xl font-bold text-foreground">FutbolUAgency</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -47,7 +47,7 @@ const Header = () => {
           {/* CTA Button */}
           <Button 
             asChild
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all rounded-xl"
           >
             <a href="https://calendly.com/miguelangelrojascas/caribe-pos" target="_blank" rel="noopener noreferrer">
               Evalúa tu Beca GRATIS
