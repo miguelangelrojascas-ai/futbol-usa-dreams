@@ -1,12 +1,20 @@
 import { Star } from "lucide-react";
+import joepJoshuaImage from "@/assets/joep-joshua.jpg";
 
 const testimonials = [
+  {
+    name: "Joep Joshua",
+    position: "Mediocampista",
+    university: "Seattle University",
+    image: joepJoshuaImage,
+    quote: "Comprometido con Seattle University gracias al apoyo incondicional de Futbol U Agency. Este es el comienzo de un gran capítulo en mi carrera deportiva y académica.",
+  },
   {
     name: "Alejandro Pérez",
     position: "Delantero",
     university: "Stanford University",
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800",
-    quote: "Gracias a Futbol Agency, ahora estoy jugando en una de las mejores universidades del país mientras obtengo una educación de clase mundial. El equipo me apoyó en cada paso.",
+    quote: "Gracias a Futbol U Agency, ahora estoy jugando en una de las mejores universidades del país mientras obtengo una educación de clase mundial. El equipo me apoyó en cada paso.",
   },
   {
     name: "David Moreno",
@@ -20,7 +28,7 @@ const testimonials = [
     position: "Mediocampista",
     university: "Univ. North Carolina",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800",
-    quote: "Nunca pensé que mi sueño de jugar en Estados Unidos sería posible. Futbol Agency no solo lo hizo realidad, sino que negociaron una beca que cubre todo. ¡Eternamente agradecida!",
+    quote: "Nunca pensé que mi sueño de jugar en Estados Unidos sería posible. Futbol U Agency no solo lo hizo realidad, sino que negociaron una beca que cubre todo. ¡Eternamente agradecida!",
   },
 ];
 
