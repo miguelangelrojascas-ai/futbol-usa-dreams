@@ -1,38 +1,37 @@
 import { CheckCircle2 } from "lucide-react";
-
-const steps = [
-  {
-    number: "01",
-    title: "Evaluación Integral del Perfil",
-    description: "Análisis deportivo, académico y personal para determinar tu potencial y objetivos.",
-  },
-  {
-    number: "02",
-    title: "Creación de Highlight Video Profesional",
-    description: "Producimos tu video destacado que captura tu mejor nivel para impresionar entrenadores.",
-  },
-  {
-    number: "03",
-    title: "Contacto Directo con Universidades",
-    description: "Te conectamos con entrenadores universitarios y gestionamos el proceso de reclutamiento.",
-  },
-  {
-    number: "04",
-    title: "Oferta, Visado y Asesoría Final",
-    description: "Negociamos tu beca, te guiamos en el visado y te preparamos para tu nueva vida en EE. UU.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const FunnelSection = () => {
+  const { t } = useLanguage();
+  
+  const steps = [
+    {
+      number: "01",
+      titleKey: "funnel.step1",
+    },
+    {
+      number: "02",
+      titleKey: "funnel.step2",
+    },
+    {
+      number: "03",
+      titleKey: "funnel.step3",
+    },
+    {
+      number: "04",
+      titleKey: "funnel.step4",
+    },
+  ];
+
   return (
     <section className="py-20 bg-neutral-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Tu Camino a la Beca
+            {t('funnel.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Un proceso claro, personalizado y respaldado por experiencia internacional
+            {t('funnel.subtitle')}
           </p>
         </div>
 
@@ -61,11 +60,8 @@ const FunnelSection = () => {
                   {/* Content */}
                   <div className="flex-1 bg-card p-6 rounded-xl shadow-lg border border-border">
                     <h3 className="text-xl md:text-2xl font-bold text-primary mb-3">
-                      {step.title}
+                      {t(step.titleKey)}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
                   </div>
                 </div>
               </div>

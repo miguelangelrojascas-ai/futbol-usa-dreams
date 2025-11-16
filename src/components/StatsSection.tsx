@@ -1,11 +1,15 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const stats = [
-  { value: "350+", label: "Universidades aliadas" },
-  { value: "40+", label: "Estados cubiertos" },
-  { value: "$10M+", label: "En becas gestionadas" },
-  { value: "98%", label: "Tasa de éxito" },
+  { value: "350+", labelKey: "stats.universities" },
+  { value: "40+", labelKey: "stats.states" },
+  { value: "$10M+", labelKey: "stats.scholarships" },
+  { value: "98%", labelKey: "stats.success" },
 ];
 
 const StatsSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-20 bg-neutral-light">
       <div className="container mx-auto px-4">
@@ -16,7 +20,7 @@ const StatsSection = () => {
                 {stat.value}
               </div>
               <div className="text-muted-foreground font-medium">
-                {stat.label}
+                {t(stat.labelKey)}
               </div>
             </div>
           ))}

@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Globe } from "lucide-react";
 
 const Header = () => {
+  const { language, setLanguage, t } = useLanguage();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -28,31 +31,42 @@ const Header = () => {
               onClick={() => scrollToSection("servicios")}
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
-              Servicios
+              {t('nav.services')}
             </button>
             <button
               onClick={() => scrollToSection("casos-exito")}
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
-              Casos de Éxito
+              {t('nav.success')}
             </button>
             <button
               onClick={() => scrollToSection("quienes-somos")}
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
-              Quiénes Somos
+              {t('nav.about')}
             </button>
           </nav>
 
-          {/* CTA Button */}
-          <Button 
-            asChild
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all rounded-xl"
-          >
-            <a href="https://calendly.com/miguelangelrojascas/caribe-pos" target="_blank" rel="noopener noreferrer">
-              Evalúa tu Beca GRATIS
-            </a>
-          </Button>
+          {/* Language Switcher & CTA */}
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
+              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-medium"
+              aria-label="Change language"
+            >
+              <Globe className="w-5 h-5" />
+              <span className="text-sm font-semibold">{language === 'es' ? 'EN' : 'ES'}</span>
+            </button>
+            
+            <Button 
+              asChild
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all rounded-xl"
+            >
+              <a href="https://calendly.com/miguelangelrojascas/caribe-pos" target="_blank" rel="noopener noreferrer">
+                {t('nav.cta')}
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </header>

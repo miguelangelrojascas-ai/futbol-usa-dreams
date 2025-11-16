@@ -1,34 +1,35 @@
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import ignacioImage from "@/assets/ignacio.jpg";
 import mohaImage from "@/assets/moha.jpg";
 
-const founders = [
-  {
-    name: "Ignacio De Bejar",
-    role: "Finanzas y Operaciones",
-    quote: "Vivir la soledad de estar en un país extranjero con una agencia que solo buscaba dinero me marcó. Fundé esto para que ningún jugador se sienta abandonado.",
-    image: ignacioImage,
-  },
-  {
-    name: "Moha Tahri",
-    role: "Relaciones con Universidades",
-    quote: "Me sentí abandonado al intentar transferirme. Nuestra misión es estar presentes en todo momento para el jugador y su familia.",
-    image: mohaImage,
-  },
-];
-
 const AboutSection = () => {
+  const { t } = useLanguage();
+  
+  const founders = [
+    {
+      name: "Ignacio De Bejar",
+      roleKey: "about.ignacio.role",
+      quoteKey: "about.ignacio.quote",
+      image: ignacioImage,
+    },
+    {
+      name: "Moha Tahri",
+      roleKey: "about.moha.role",
+      quoteKey: "about.moha.quote",
+      image: mohaImage,
+    },
+  ];
+
   return (
     <section id="quienes-somos" className="py-20 bg-neutral-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Más que una Agencia, Somos tu Equipo
+            {t('about.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ignacio y Mohammed fundaron FutbolUAgency para que ningún jugador vuelva a sentirse solo en su sueño. 
-            Tras vivir malas experiencias con agencias poco transparentes, decidieron crear una organización cercana, 
-            profesional y comprometida.
+            {t('about.subtitle')}
           </p>
         </div>
 
@@ -50,10 +51,10 @@ const AboutSection = () => {
                   {founder.name}
                 </h3>
                 <p className="text-secondary font-semibold mb-4">
-                  {founder.role}
+                  {t(founder.roleKey)}
                 </p>
                 <p className="text-muted-foreground italic leading-relaxed">
-                  "{founder.quote}"
+                  "{t(founder.quoteKey)}"
                 </p>
               </div>
             </div>
@@ -67,7 +68,7 @@ const AboutSection = () => {
             className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold shadow-lg rounded-xl"
           >
             <a href="https://calendly.com/miguelangelrojascas/caribe-pos" target="_blank" rel="noopener noreferrer">
-              Conoce cómo podemos ayudarte
+              {t('about.cta')}
             </a>
           </Button>
         </div>

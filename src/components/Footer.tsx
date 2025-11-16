@@ -1,6 +1,9 @@
 import { Mail, Phone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -23,13 +26,13 @@ const Footer = () => {
               <span className="text-xl font-bold">FutbolUAgency</span>
             </div>
             <p className="text-background/80 text-sm">
-              Transformamos tu talento deportivo en una oportunidad universitaria en Estados Unidos
+              {t('footer.tagline')}
             </p>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Contacto</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.contact')}</h3>
             <div className="space-y-3">
               <a 
                 href="mailto:futboluagency@gmail.com" 
@@ -50,25 +53,25 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Enlaces Rápidos</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.links')}</h3>
             <div className="space-y-2">
               <button
                 onClick={() => scrollToSection("servicios")}
                 className="block text-background/80 hover:text-background transition-colors text-sm"
               >
-                Servicios
+                {t('nav.services')}
               </button>
               <button
                 onClick={() => scrollToSection("quienes-somos")}
                 className="block text-background/80 hover:text-background transition-colors text-sm"
               >
-                Quiénes Somos
+                {t('nav.about')}
               </button>
               <button
                 onClick={() => scrollToSection("casos-exito")}
                 className="block text-background/80 hover:text-background transition-colors text-sm"
               >
-                Casos de Éxito
+                {t('nav.success')}
               </button>
             </div>
           </div>
@@ -76,7 +79,7 @@ const Footer = () => {
 
         <div className="border-t border-background/20 pt-8 text-center">
           <p className="text-background/60 text-sm">
-            © {new Date().getFullYear()} FutbolUAgency. Todos los derechos reservados.
+            © {new Date().getFullYear()} FutbolUAgency. {t('footer.rights')}
           </p>
         </div>
       </div>

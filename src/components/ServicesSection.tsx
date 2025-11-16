@@ -1,38 +1,41 @@
 import { Target, Video, Handshake, HeartHandshake } from "lucide-react";
-
-const services = [
-  {
-    icon: Target,
-    title: "Evaluación Deportiva y Académica",
-    description: "Analizamos tu nivel futbolístico y académico para identificar universidades que encajen con tu perfil, metas y presupuesto.",
-  },
-  {
-    icon: Video,
-    title: "Creación de Perfil Profesional + Highlight",
-    description: "Diseñamos tu perfil completo en inglés, incluyendo edición de video profesional con tus mejores jugadas.",
-  },
-  {
-    icon: Handshake,
-    title: "Conexión Directa y Negociación con Universidades",
-    description: "Nos encargamos de presentarte a entrenadores en EE. UU. y gestionar becas según tus objetivos.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Acompañamiento Personalizado",
-    description: "Te guiamos paso a paso: aplicación universitaria, visado, procesos deportivos y adaptación.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+  
+  const services = [
+    {
+      icon: Target,
+      titleKey: "services.1.title",
+      descKey: "services.1.desc",
+    },
+    {
+      icon: Video,
+      titleKey: "services.2.title",
+      descKey: "services.2.desc",
+    },
+    {
+      icon: Handshake,
+      titleKey: "services.3.title",
+      descKey: "services.3.desc",
+    },
+    {
+      icon: HeartHandshake,
+      titleKey: "services.4.title",
+      descKey: "services.4.desc",
+    },
+  ];
+
   return (
     <section id="servicios" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Nuestros Servicios
+            {t('services.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Te acompañamos en todo el proceso hacia tu beca deportiva en EE. UU.
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -46,10 +49,10 @@ const ServicesSection = () => {
                 <service.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-lg font-bold text-foreground mb-3">
-                {service.title}
+                {t(service.titleKey)}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                {service.description}
+                {t(service.descKey)}
               </p>
             </div>
           ))}
