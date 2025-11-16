@@ -24,42 +24,42 @@ const FunnelSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-muted">
+    <section className="py-20 bg-neutral-light">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             {t('funnel.title')}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t('funnel.subtitle')}
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Vertical Line */}
-            <div className="absolute left-10 md:left-20 top-0 bottom-0 w-1 bg-primary/10 rounded-full" />
+            <div className="absolute left-8 md:left-16 top-0 bottom-0 w-0.5 bg-primary/20" />
 
             {steps.map((step, index) => (
-              <div key={index} className="relative mb-16 last:mb-0">
-                <div className="flex items-start gap-8">
+              <div key={index} className="relative mb-12 last:mb-0">
+                <div className="flex items-start gap-6">
                   {/* Number Circle */}
                   <div className="relative z-10 flex-shrink-0">
-                    <div className="w-20 h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                      <span className="text-white text-2xl md:text-3xl font-bold">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-white text-xl md:text-2xl font-bold">
                         {step.number}
                       </span>
                     </div>
                     {index < steps.length - 1 && (
-                      <div className="absolute top-24 md:top-28 left-1/2 transform -translate-x-1/2">
-                        <CheckCircle2 className="w-7 h-7 text-secondary fill-secondary/20" />
+                      <div className="absolute top-20 left-1/2 transform -translate-x-1/2">
+                        <CheckCircle2 className="w-6 h-6 text-secondary" />
                       </div>
                     )}
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 bg-card p-8 rounded-xl shadow-md border border-border/50">
-                    <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight">
+                  <div className="flex-1 bg-card p-6 rounded-xl shadow-lg border border-border">
+                    <h3 className="text-xl md:text-2xl font-bold text-primary mb-3">
                       {t(step.titleKey)}
                     </h3>
                   </div>

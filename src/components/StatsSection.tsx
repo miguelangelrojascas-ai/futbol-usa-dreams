@@ -11,15 +11,15 @@ const StatsSection = () => {
   const { t } = useLanguage();
   
   return (
-    <section className="py-24 bg-muted">
+    <section className="py-20 bg-neutral-light">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-3">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                 {stat.value}
               </div>
-              <div className="text-foreground/70 font-medium text-base">
+              <div className="text-muted-foreground font-medium">
                 {t(stat.labelKey)}
               </div>
             </div>

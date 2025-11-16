@@ -40,52 +40,52 @@ const TestimonialsSection = () => {
   const { t } = useLanguage();
   
   return (
-    <section id="casos-exito" className="py-24 bg-background">
+    <section id="casos-exito" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             {t('testimonials.title')}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t('testimonials.subtitle')}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border/50 flex flex-col"
+              className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-border"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-square overflow-hidden">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-6">
                 {/* Stars */}
-                <div className="flex gap-1 mb-4 justify-center">
+                <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
                   ))}
                 </div>
 
                 {/* Quote */}
-                <p className="text-muted-foreground italic mb-5 text-sm leading-relaxed text-center flex-grow">
+                <p className="text-muted-foreground italic mb-4 text-sm leading-relaxed">
                   "{testimonial.quote}"
                 </p>
 
                 {/* Info */}
-                <div className="text-center border-t border-border/50 pt-4">
-                  <h3 className="text-base font-bold text-foreground mb-1">
+                <div>
+                  <h3 className="text-lg font-bold text-foreground">
                     {testimonial.name}
                   </h3>
-                  <p className="text-primary font-semibold text-sm mb-1">
+                  <p className="text-primary font-semibold text-sm">
                     {testimonial.position}
                   </p>
-                  <p className="text-muted-foreground text-xs">
+                  <p className="text-muted-foreground text-sm">
                     {testimonial.university}
                   </p>
                 </div>

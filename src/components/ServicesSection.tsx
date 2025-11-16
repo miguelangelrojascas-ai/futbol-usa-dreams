@@ -28,13 +28,13 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="servicios" className="py-24 bg-background">
+    <section id="servicios" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             {t('services.title')}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t('services.subtitle')}
           </p>
         </div>
@@ -43,12 +43,12 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-card p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border/50"
+              className="bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-border"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                <service.icon className="w-8 h-8 text-primary" />
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                <service.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4 leading-tight">
+              <h3 className="text-lg font-bold text-foreground mb-3">
                 {t(service.titleKey)}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
