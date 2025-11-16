@@ -1,38 +1,41 @@
 import { Trophy, GraduationCap, Video, Globe } from "lucide-react";
-
-const requirements = [
-  {
-    icon: Trophy,
-    title: "Nivel Deportivo",
-    description: "Experiencia competitiva en clubes, academias o selecciones.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Nivel de Estudios",
-    description: "Haber terminado el bachillerato/ESO o estar en último año.",
-  },
-  {
-    icon: Video,
-    title: "Video Destacado",
-    description: "Tener videos jugando es fundamental para evaluar tu nivel.",
-  },
-  {
-    icon: Globe,
-    title: "Inglés Básico",
-    description: "Se recomienda un nivel básico de inglés. Te guiamos en los exámenes.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const RequirementsSection = () => {
+  const { t } = useLanguage();
+  
+  const requirements = [
+    {
+      icon: Trophy,
+      titleKey: "requirements.1.title",
+      descKey: "requirements.1.desc",
+    },
+    {
+      icon: GraduationCap,
+      titleKey: "requirements.2.title",
+      descKey: "requirements.2.desc",
+    },
+    {
+      icon: Video,
+      titleKey: "requirements.3.title",
+      descKey: "requirements.3.desc",
+    },
+    {
+      icon: Globe,
+      titleKey: "requirements.4.title",
+      descKey: "requirements.4.desc",
+    },
+  ];
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Requisitos Básicos
+            {t('requirements.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Lo que necesitas para iniciar tu camino hacia una beca deportiva
+            {t('requirements.subtitle')}
           </p>
         </div>
 
@@ -46,10 +49,10 @@ const RequirementsSection = () => {
                 <req.icon className="w-7 h-7 text-secondary" />
               </div>
               <h3 className="text-lg font-bold text-foreground mb-3">
-                {req.title}
+                {t(req.titleKey)}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                {req.description}
+                {t(req.descKey)}
               </p>
             </div>
           ))}

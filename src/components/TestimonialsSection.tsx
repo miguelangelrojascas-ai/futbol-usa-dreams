@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import omarImage from "@/assets/omar-ocampos.jpg";
 import rogelioImage from "@/assets/rogelio-rojas.jpg";
 import diegoImage from "@/assets/diego-salamanca.jpg";
@@ -6,45 +7,47 @@ import joepJoshuaImage from "@/assets/joep-joshua.jpg";
 
 const testimonials = [
   {
+    name: "Joep Joshua",
+    position: "Defensa Central",
+    university: "Seattle University",
+    image: joepJoshuaImage,
+    quote: "Quiero agradecer a FutbolUAgency por todo el apoyo en mi proceso de transferencia. Gracias a su ayuda, hoy puedo decir que formo parte de una universidad NCAA D1 como Seattle U. Han sido clave en cada paso del camino",
+  },
+  {
     name: "Omar Ocampos",
     position: "Mediocampista",
     university: "Cowley College",
     image: omarImage,
-    quote: "FutbolUAgency me ayudó a cumplir mi sueño de jugar y estudiar en Estados Unidos. Su apoyo fue incondicional desde el primer día.",
+    quote: "Gracias a Moha e Ignacio he conseguido ir al mejor Junior College del país con beca completa, con el objetivo claro de transferirme a una NCAA D1.",
   },
   {
     name: "Rogelio Rojas",
     position: "Mediocampista",
     university: "Shorter University",
     image: rogelioImage,
-    quote: "El equipo de FutbolUAgency estuvo siempre presente, guiándome en cada paso del proceso. Ahora estoy viviendo mi sueño americano.",
+    quote: "Estaba en una universidad NCAA D2 donde el coach no confiaba en mí ni me daba oportunidades. Pero cuando conocí FutbolUAgency, todo cambió: consiguieron para mí una mejor beca en otra universidad, donde hoy soy una pieza clave del equipo y me siento valorado.",
   },
   {
     name: "Diego Salamanca",
     position: "Defensa",
     university: "UW-Stout",
     image: diegoImage,
-    quote: "Gracias a FutbolUAgency conseguí una beca completa en una excelente universidad. Su profesionalismo y dedicación marcaron la diferencia.",
-  },
-  {
-    name: "Joep Joshua",
-    position: "Mediocampista",
-    university: "Seattle University",
-    image: joepJoshuaImage,
-    quote: "Comprometido con Seattle University gracias al apoyo incondicional de FutbolUAgency. Este es el comienzo de un gran capítulo en mi carrera deportiva y académica.",
+    quote: "Busqué una transferencia y contacté con FutbolUAgency, quienes hicieron realidad una mejor beca y una universidad bien ubicada para seguir creciendo académica y deportivamente. ¡Gracias por el apoyo en este proceso!",
   },
 ];
 
 const TestimonialsSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="casos-exito" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Casos de Éxito
+            {t('testimonials.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Historias reales de jugadores que cumplieron su sueño con nuestra ayuda
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
