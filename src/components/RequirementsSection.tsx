@@ -28,13 +28,13 @@ const RequirementsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             {t('requirements.title')}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {t('requirements.subtitle')}
           </p>
         </div>
@@ -43,15 +43,15 @@ const RequirementsSection = () => {
           {requirements.map((req, index) => (
             <div
               key={index}
-              className="bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-border text-center"
+              className="bg-card p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border/50 text-center flex flex-col h-full"
             >
-              <div className="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                <req.icon className="w-7 h-7 text-secondary" />
+              <div className="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                <req.icon className="w-8 h-8 text-secondary" strokeWidth={1.5} />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-3">
+              <h3 className="text-xl font-bold text-foreground mb-4 leading-tight">
                 {t(req.titleKey)}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-base leading-relaxed flex-grow">
                 {t(req.descKey)}
               </p>
             </div>
