@@ -69,16 +69,22 @@ const AboutSection = () => {
                 </p>
                 
                 <Collapsible open={founder.isOpen} onOpenChange={founder.setIsOpen}>
-                  <CollapsibleTrigger className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors">
-                    {founder.isOpen ? t('about.readLess') : t('about.readMore')}
-                    <ChevronDown className={`h-4 w-4 transition-transform ${founder.isOpen ? 'rotate-180' : ''}`} />
-                  </CollapsibleTrigger>
+                  {!founder.isOpen && (
+                    <CollapsibleTrigger className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors">
+                      {t('about.readMore')}
+                      <ChevronDown className="h-4 w-4 transition-transform" />
+                    </CollapsibleTrigger>
+                  )}
                   <CollapsibleContent className="mt-4">
                     <div className="text-muted-foreground leading-relaxed space-y-4">
                       {t(founder.storyKey).split('\n\n').map((paragraph, idx) => (
                         <p key={idx}>{paragraph}</p>
                       ))}
                     </div>
+                    <CollapsibleTrigger className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors mt-4">
+                      {t('about.readLess')}
+                      <ChevronDown className="h-4 w-4 transition-transform rotate-180" />
+                    </CollapsibleTrigger>
                   </CollapsibleContent>
                 </Collapsible>
               </div>
