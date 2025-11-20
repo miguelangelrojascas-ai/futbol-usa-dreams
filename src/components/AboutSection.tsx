@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ignacioImage from "@/assets/ignacio.jpg";
 import mohaImage from "@/assets/moha.jpg";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
@@ -65,28 +64,30 @@ const AboutSection = () => {
                   "{t(founder.quoteKey)}"
                 </p>
                 
-                <Collapsible 
-                  open={openFounder === founder.id} 
-                  onOpenChange={(isOpen) => setOpenFounder(isOpen ? founder.id : null)}
-                >
-                  {openFounder !== founder.id && (
-                    <CollapsibleTrigger className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors">
-                      {t('about.readMore')}
-                      <ChevronDown className="h-4 w-4 transition-transform" />
-                    </CollapsibleTrigger>
-                  )}
-                  <CollapsibleContent className="mt-4">
-                    <div className="text-muted-foreground leading-relaxed space-y-4">
+                {openFounder !== founder.id ? (
+                  <button
+                    onClick={() => setOpenFounder(founder.id)}
+                    className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors"
+                  >
+                    {t('about.readMore')}
+                    <ChevronDown className="h-4 w-4 transition-transform" />
+                  </button>
+                ) : (
+                  <div className="space-y-4">
+                    <div className="text-muted-foreground leading-relaxed space-y-4 animate-accordion-down">
                       {t(founder.storyKey).split('\n\n').map((paragraph, idx) => (
                         <p key={idx}>{paragraph}</p>
                       ))}
                     </div>
-                    <CollapsibleTrigger className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors mt-4">
+                    <button
+                      onClick={() => setOpenFounder(null)}
+                      className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors"
+                    >
                       {t('about.readLess')}
                       <ChevronDown className="h-4 w-4 transition-transform rotate-180" />
-                    </CollapsibleTrigger>
-                  </CollapsibleContent>
-                </Collapsible>
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           ))}
