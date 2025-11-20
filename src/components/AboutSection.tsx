@@ -8,27 +8,24 @@ import { useState } from "react";
 
 const AboutSection = () => {
   const { t } = useLanguage();
-  const [openIgnacio, setOpenIgnacio] = useState(false);
-  const [openMoha, setOpenMoha] = useState(false);
+  const [openFounder, setOpenFounder] = useState<string | null>(null);
   
   const founders = [
     {
+      id: "ignacio",
       name: "Ignacio De Bejar",
       roleKey: "about.ignacio.role",
       quoteKey: "about.ignacio.quote",
       storyKey: "about.ignacio.story",
       image: ignacioImage,
-      isOpen: openIgnacio,
-      setIsOpen: setOpenIgnacio,
     },
     {
+      id: "moha",
       name: "Moha Tahri",
       roleKey: "about.moha.role",
       quoteKey: "about.moha.quote",
       storyKey: "about.moha.story",
       image: mohaImage,
-      isOpen: openMoha,
-      setIsOpen: setOpenMoha,
     },
   ];
 
@@ -68,8 +65,11 @@ const AboutSection = () => {
                   "{t(founder.quoteKey)}"
                 </p>
                 
-                <Collapsible open={founder.isOpen} onOpenChange={founder.setIsOpen}>
-                  {!founder.isOpen && (
+                <Collapsible 
+                  open={openFounder === founder.id} 
+                  onOpenChange={(isOpen) => setOpenFounder(isOpen ? founder.id : null)}
+                >
+                  {openFounder !== founder.id && (
                     <CollapsibleTrigger className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors">
                       {t('about.readMore')}
                       <ChevronDown className="h-4 w-4 transition-transform" />
