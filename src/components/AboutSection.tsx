@@ -2,22 +2,33 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ignacioImage from "@/assets/ignacio.jpg";
 import mohaImage from "@/assets/moha.jpg";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 const AboutSection = () => {
   const { t } = useLanguage();
+  const [openIgnacio, setOpenIgnacio] = useState(false);
+  const [openMoha, setOpenMoha] = useState(false);
   
   const founders = [
     {
       name: "Ignacio De Bejar",
       roleKey: "about.ignacio.role",
       quoteKey: "about.ignacio.quote",
+      storyKey: "about.ignacio.story",
       image: ignacioImage,
+      isOpen: openIgnacio,
+      setIsOpen: setOpenIgnacio,
     },
     {
       name: "Moha Tahri",
       roleKey: "about.moha.role",
       quoteKey: "about.moha.quote",
+      storyKey: "about.moha.story",
       image: mohaImage,
+      isOpen: openMoha,
+      setIsOpen: setOpenMoha,
     },
   ];
 
@@ -53,9 +64,23 @@ const AboutSection = () => {
                 <p className="text-secondary font-semibold mb-4">
                   {t(founder.roleKey)}
                 </p>
-                <p className="text-muted-foreground italic leading-relaxed">
+                <p className="text-muted-foreground italic leading-relaxed mb-4">
                   "{t(founder.quoteKey)}"
                 </p>
+                
+                <Collapsible open={founder.isOpen} onOpenChange={founder.setIsOpen}>
+                  <CollapsibleTrigger className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors">
+                    {founder.isOpen ? t('about.readLess') : t('about.readMore')}
+                    <ChevronDown className={`h-4 w-4 transition-transform ${founder.isOpen ? 'rotate-180' : ''}`} />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="mt-4">
+                    <div className="text-muted-foreground leading-relaxed space-y-4">
+                      {t(founder.storyKey).split('\n\n').map((paragraph, idx) => (
+                        <p key={idx}>{paragraph}</p>
+                      ))}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
               </div>
             </div>
           ))}
