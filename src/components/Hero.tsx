@@ -1,20 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroBackground from "@/assets/hero-background.jpg";
-
 const Hero = () => {
-  const { t } = useLanguage();
-  
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  const {
+    t
+  } = useLanguage();
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('${heroBackground}')`,
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url('${heroBackground}')`
+      }} />
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
@@ -27,12 +23,8 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-white/95 mb-8 max-w-2xl mx-auto">
             {t('hero.subtitle')}
           </p>
-          <Button 
-            asChild
-            size="lg"
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all font-bold rounded-xl"
-          >
-            <a href="https://calendly.com/miguelangelrojascas/caribe-pos" target="_blank" rel="noopener noreferrer">
+          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all font-bold rounded-xl">
+            <a target="_blank" rel="noopener noreferrer" href="https://calendly.com/miguelangelrojascas/new-meeting">
               {t('hero.cta')}
             </a>
           </Button>
@@ -45,8 +37,6 @@ const Hero = () => {
           <div className="w-1 h-3 bg-white/50 rounded-full" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
