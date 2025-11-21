@@ -99,7 +99,7 @@ const AboutSection = () => {
             size="lg"
             className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold shadow-lg rounded-xl"
           >
-            <a href="https://calendly.com/miguelangelrojascas/caribe-pos" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendly.com/miguelangelrojascas/new-meeting" target="_blank" rel="noopener noreferrer">
               {t('about.cta')}
             </a>
           </Button>

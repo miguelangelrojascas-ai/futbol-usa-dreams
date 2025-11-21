@@ -62,7 +62,7 @@ const Header = () => {
               asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all rounded-xl"
             >
-              <a href="https://calendly.com/miguelangelrojascas/caribe-pos" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/miguelangelrojascas/new-meeting" target="_blank" rel="noopener noreferrer">
                 {t('nav.cta')}
               </a>
             </Button>
