@@ -21,7 +21,7 @@ const CTASection = () => {
             className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all font-bold rounded-xl"
           >
             <a 
-              href="https://calendly.com/miguelangelrojascas/caribe-pos" 
+              href="https://calendly.com/miguelangelrojascas/new-meeting" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2"
