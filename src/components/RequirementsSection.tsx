@@ -45,8 +45,8 @@ const RequirementsSection = () => {
               key={index}
               className="bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-border text-center"
             >
-              <div className="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                <req.icon className="w-7 h-7 text-secondary" />
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                <req.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-lg font-bold text-foreground mb-3">
                 {t(req.titleKey)}
