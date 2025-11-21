@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import omarImage from "@/assets/omar-ocampos.jpg";
 import rogelioImage from "@/assets/rogelio-rojas.jpg";
@@ -40,8 +40,9 @@ const TestimonialsSection = () => {
   const { t } = useLanguage();
   
   return (
-    <section id="casos-exito" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="casos-exito" className="py-20 bg-gradient-to-b from-background via-neutral-light to-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,_rgba(52,144,220,0.12),_transparent_40%),radial-gradient(circle_at_20%_70%,_rgba(244,63,94,0.12),_transparent_45%)]" />
+      <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             {t('testimonials.title')}
@@ -55,39 +56,43 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-border"
+              className="relative bg-white rounded-2xl overflow-hidden shadow-xl border border-border/80 hover:-translate-y-1 transition-all"
             >
-              <div className="aspect-square overflow-hidden">
+              <div className="aspect-square overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10" />
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute bottom-4 left-4 z-20 flex items-center gap-2 text-white text-xs font-semibold">
+                  <Quote className="h-4 w-4" />
+                  <span>{testimonial.university}</span>
+                </div>
               </div>
               <div className="p-6">
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
                   ))}
                 </div>
 
-                {/* Quote */}
                 <p className="text-muted-foreground italic mb-4 text-sm leading-relaxed">
                   "{testimonial.quote}"
                 </p>
 
-                {/* Info */}
-                <div>
-                  <h3 className="text-lg font-bold text-foreground">
-                    {testimonial.name}
-                  </h3>
-                  <p className="text-primary font-semibold text-sm">
-                    {testimonial.position}
-                  </p>
-                  <p className="text-muted-foreground text-sm">
-                    {testimonial.university}
-                  </p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-primary font-semibold text-sm">
+                      {testimonial.position}
+                    </p>
+                  </div>
+                  <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">
+                    Transfer
+                  </span>
                 </div>
               </div>
             </div>

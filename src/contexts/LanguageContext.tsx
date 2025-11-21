@@ -22,12 +22,31 @@ const translations = {
     'hero.title': 'Cumple tu sueño de jugar y estudiar en Estados Unidos',
     'hero.subtitle': 'Convertimos tu talento en una oportunidad universitaria real',
     'hero.cta': 'Comenzar mi Evaluación Gratuita',
+    'hero.secondaryCta': 'Ver casos de éxito',
+    'hero.trust': 'Acompañamos a jugadores de 12 países a conseguir becas completas.',
+    'hero.badge1': 'Sesión estratégica 1:1',
+    'hero.badge2': 'Respuesta en menos de 24h',
+    'hero.playbookLabel': 'Roadmap personalizado',
+    'hero.playbookTitle': 'FutbolU Playbook',
+    'hero.playbookTier': 'Elite',
+    'hero.playbook1': 'Evaluación deportiva y académica 360°',
+    'hero.playbook2': 'Highlight profesional listo para entrenadores',
+    'hero.playbook3': 'Negociación directa con universidades NCAA/NAIA',
+    'hero.playbook4': 'Visa, onboarding y acompañamiento familiar',
+    'hero.playbookNext': 'Próximos cupos',
+    'hero.playbookWeek': 'Evaluaciones esta semana',
+    'hero.playbookSlots': '4 espacios',
     
     // Stats
     'stats.universities': 'Universidades aliadas',
     'stats.states': 'Estados cubiertos',
     'stats.scholarships': 'En becas gestionadas',
     'stats.success': 'Tasa de éxito',
+    'stats.title': 'Impacto Global y Resultados',
+    'stats.subtitle': 'Datos que respaldan nuestro compromiso con tu beca deportiva en Estados Unidos.',
+
+    // Services
+    'services.badge': 'Mentoría integral',
     
     // Services
     'services.title': 'Nuestros Servicios',
@@ -65,6 +84,7 @@ const translations = {
     'requirements.3.desc': 'Tener videos jugando es fundamental para evaluar tu nivel.',
     'requirements.4.title': 'Inglés Básico',
     'requirements.4.desc': 'Se recomienda un nivel básico de inglés. Te guiamos en los exámenes.',
+    'requirements.ready': 'Listo',
     
     // Funnel
     'funnel.title': 'Tu Camino a la Beca',
@@ -82,6 +102,7 @@ const translations = {
     'cta.title': '¿Listo para comenzar?',
     'cta.subtitle': 'Agenda una evaluación gratuita de 20 minutos con nuestro equipo.',
     'cta.button': 'Evalúa tu Beca GRATIS',
+    'cta.note': 'Respondemos a todas las aplicaciones en menos de 24 horas.',
     
     // Footer
     'footer.tagline': 'Transformamos tu talento deportivo en una oportunidad universitaria en Estados Unidos',
@@ -100,13 +121,32 @@ const translations = {
     'hero.title': 'Fulfill Your Dream of Playing and Studying in the United States',
     'hero.subtitle': 'We turn your talent into a real university opportunity',
     'hero.cta': 'Start My Free Evaluation',
+    'hero.secondaryCta': 'See success stories',
+    'hero.trust': 'We guide players from 12 countries to secure full scholarships.',
+    'hero.badge1': '1:1 strategy session',
+    'hero.badge2': 'Response in under 24h',
+    'hero.playbookLabel': 'Personalized roadmap',
+    'hero.playbookTitle': 'FutbolU Playbook',
+    'hero.playbookTier': 'Elite',
+    'hero.playbook1': '360° sports and academic evaluation',
+    'hero.playbook2': 'Pro highlight video ready for coaches',
+    'hero.playbook3': 'Direct negotiation with NCAA/NAIA universities',
+    'hero.playbook4': 'Visa, onboarding and family support',
+    'hero.playbookNext': 'Next available slots',
+    'hero.playbookWeek': 'Evaluations this week',
+    'hero.playbookSlots': '4 spots left',
     
     // Stats
     'stats.universities': 'Partner Universities',
     'stats.states': 'States Covered',
     'stats.scholarships': 'In Managed Scholarships',
     'stats.success': 'Success Rate',
-    
+    'stats.title': 'Global Impact and Results',
+    'stats.subtitle': 'Numbers that prove our commitment to your sports scholarship in the U.S.',
+
+    // Services
+    'services.badge': 'End-to-end mentorship',
+
     // Services
     'services.title': 'Our Services',
     'services.subtitle': 'We accompany you through the entire process towards your sports scholarship in the U.S.',
@@ -143,6 +183,7 @@ const translations = {
     'requirements.3.desc': 'Having game videos is essential to evaluate your level.',
     'requirements.4.title': 'Basic English',
     'requirements.4.desc': 'A basic level of English is recommended. We guide you through the exams.',
+    'requirements.ready': 'Ready',
     
     // Funnel
     'funnel.title': 'Your Path to the Scholarship',
@@ -160,6 +201,7 @@ const translations = {
     'cta.title': 'Ready to Start?',
     'cta.subtitle': 'Schedule a free 20-minute evaluation with our team.',
     'cta.button': 'Evaluate Your Scholarship FREE',
+    'cta.note': 'We answer every application in under 24 hours.',
     
     // Footer
     'footer.tagline': 'We transform your sports talent into a university opportunity in the United States',
