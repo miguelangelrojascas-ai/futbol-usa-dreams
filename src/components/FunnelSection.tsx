@@ -63,7 +63,7 @@ const FunnelSection = () => {
 
                   {/* Content Card with Enhanced Design */}
                   <div className="flex-1 bg-gradient-to-br from-card to-card/50 p-6 md:p-8 rounded-2xl shadow-xl border-2 border-primary/10 hover:border-primary/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm">
-                    <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-3">
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
                       {t(step.titleKey)}
                     </h3>
                   </div>
