@@ -17,13 +17,13 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 z-10 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight px-2">
             {t('hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl text-white/95 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-2xl text-white/95 mb-8 max-w-2xl mx-auto px-2">
             {t('hero.subtitle')}
           </p>
-          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all font-bold rounded-xl">
+          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-base md:text-lg px-6 md:px-8 py-5 md:py-6 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all font-bold rounded-xl">
             <a target="_blank" rel="noopener noreferrer" href="https://calendly.com/miguelangelrojascas/new-meeting">
               {t('hero.cta')}
             </a>
