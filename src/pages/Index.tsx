@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import LanguageToggle from "@/components/LanguageToggle";
 import Hero from "@/components/Hero";
 import StatsSection from "@/components/StatsSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -22,6 +23,7 @@ const Index = () => {
       <TestimonialsSection />
       <CTASection />
       <Footer />
+      <LanguageToggle />
     </div>
   );
 };

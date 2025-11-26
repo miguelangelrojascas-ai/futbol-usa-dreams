@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Globe } from "lucide-react";
 
 const Header = () => {
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -47,18 +46,8 @@ const Header = () => {
             </button>
           </nav>
 
-          {/* Language Switcher & CTA */}
-          <div className="flex items-center gap-2 md:gap-4">
-            <button
-              onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
-              className="flex items-center gap-1 md:gap-2 text-foreground hover:text-primary transition-colors font-medium"
-              aria-label="Change language"
-            >
-              <Globe className="w-4 h-4 md:w-5 md:h-5" />
-              <span className="text-xs md:text-sm font-semibold">{language === 'es' ? 'EN' : 'ES'}</span>
-            </button>
-            
-            <Button 
+          {/* CTA Button */}
+          <Button
               asChild
               size="sm"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all rounded-xl text-xs md:text-sm px-3 md:px-4 whitespace-nowrap"
@@ -67,7 +56,6 @@ const Header = () => {
                 {t('nav.cta')}
               </a>
             </Button>
-          </div>
         </div>
       </div>
     </header>
